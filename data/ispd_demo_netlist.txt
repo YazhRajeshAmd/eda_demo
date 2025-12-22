@@ -1,0 +1,13 @@
+# Nodes (gate delays)
+G1 12.3
+G2 8.1
+G3 5.6
+G4 9.4
+G5 7.2
+
+EDGES
+G1 G2
+G2 G3
+G3 G4
+G1 G4
+G4 G5
