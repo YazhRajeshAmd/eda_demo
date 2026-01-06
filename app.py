@@ -45,16 +45,16 @@ mc_runs = st.sidebar.slider("Monte Carlo Runs", 100, 5000, 1000)
 use_gpu = st.sidebar.checkbox("Use GPU (AMD Instinct)", True)
 
 # --- Load Data ---
-adj, delays, nodes = load_netlist("data/ispd_demo_complex.txt")
+edges, delays, nodes = load_netlist("data/ispd_demo_complex_10x.txt")
 st.write(f"**Loaded Netlist:** {len(nodes)} gates")
 
 # --- Run Analysis ---
 if st.button("Run Timing Analysis"):
     with st.spinner("Running analysis..."):
         if use_gpu:
-            results, runtime = run_timing_gpu(adj, delays, mc_runs)
+            results, runtime = run_timing_gpu(edges, delays, mc_runs)
         else:
-            results, runtime = run_timing_cpu(adj, delays, mc_runs)
+            results, runtime = run_timing_cpu(edges, delays, mc_runs)
 
     # --- Display Metrics ---
     col1, col2 = st.columns(2)
