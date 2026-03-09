@@ -132,7 +132,7 @@ The GPU implementation parallelizes across Monte Carlo runs:
 
    For AMD ROCm support, install PyTorch with ROCm:
    ```bash
-   pip install torch --index-url https://download.pytorch.org/whl/rocm6.0
+    pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm6.0
    ```
 
 3. **Ensure AMD logo is present:**
