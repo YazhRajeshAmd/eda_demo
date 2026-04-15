@@ -2,7 +2,7 @@ import random
 
 num_gates = 500000        # Number of gates
 max_edges_per_gate = 5  # Maximum outgoing connections
-filename = "data/ispd_demo_complex.txt"
+filename = "data/ispd_demo_complex_10x.txt"
 
 # --- Generate nodes ---
 nodes = []
